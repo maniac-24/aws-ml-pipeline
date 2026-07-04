@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     bucket_name = event['Records'][0]['s3']['bucket']['name']
     file_name = event['Records'][0]['s3']['object']['key']
     
-    print(f"New file uploaded: {file_name} in bucket: {bucket_name}")
+    print(f"[CI/CD DEPLOYED] New file uploaded: {file_name} in bucket: {bucket_name}")
     
     # Only process if it's a CSV file
     if file_name.endswith('.csv'):
